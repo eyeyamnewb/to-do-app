@@ -12,8 +12,22 @@ class TaskForm(forms.ModelForm):
 		fields = '__all__'
 
 class tasedatedue(forms.ModelForm):
-	title= forms.CharField(widget= forms.TextInput(attrs={'placeholder':'Add new task...'}))
+	title= forms.widget
 
 	class Meta:
 		model = Task
-		fields = ['date]
+		fields = ['duedate']
+
+
+class bdayslect(form.ModelForm)
+
+    bday = forms.DateField(
+    widget=SelectDateWidget(
+        empty_label=("Choose Year", "Choose Month", "Choose Day"),),)
+
+class meta:
+   model: models.extrauserdata
+   fields['dob']
+
+
+
