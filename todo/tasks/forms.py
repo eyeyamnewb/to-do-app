@@ -19,14 +19,14 @@ class tasedatedue(forms.ModelForm):
 		fields = ['duedate']
 
 
-class bdayslect(form.ModelForm)
+class bdayslect(forms.ModelForm):
 
     bday = forms.DateField(
     widget=SelectDateWidget(
         empty_label=("Choose Year", "Choose Month", "Choose Day"),),)
 
 class meta:
-   model: models.extrauserdata
+   model: extrauserdata
    fields['dob']
 
 
